@@ -9,7 +9,7 @@ module.exports = {
     direccion: { type: 'string', required: true },
     correo: { type: 'string', required: true },
     empresa: { model: 'empresa' },
-    clientes: {collection: 'cliente', via: 'persona'},
+    cliente: {collection: 'cliente', via: 'persona'},
     usuario: {collection: 'usuario', via: 'persona'}
   },
   primaryKey: 'id',

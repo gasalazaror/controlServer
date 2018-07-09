@@ -6,6 +6,7 @@ module.exports = {
 
    id: {type:'number', autoIncrement: true},
    usuario: {model: 'usuario'},
+   password: {type: 'string'},
    rol: {model: 'rol'}
 
   },
