@@ -11,7 +11,7 @@ module.exports = {
     placa: { type: 'string' },
     color: { type: 'string' },
     empresa: { model: 'empresa' },
-    clientes: { collection: 'clienteVehiculo', via: 'vehiculo' },
+    clientes: { collection: 'cliente', via: 'vehiculos' },
   },
 
   primaryKey: 'id',

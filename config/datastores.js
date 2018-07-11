@@ -48,8 +48,11 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-     adapter: 'sails-postgresql',
-     url: 'postgresql://postgres@localhost:5432/bd_controltiempos'
+    // adapter: 'sails-postgresql',
+    //url: 'postgresql://postgres@localhost:5432/bd_controltiempos'
+
+    adapter: require('sails-mysql'),
+    url: 'mysql://root:kai2018zen@localhost:3306/control',
 
   },
 
