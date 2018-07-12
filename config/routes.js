@@ -28,6 +28,23 @@ module.exports.routes = {
     view: 'pages/homepage'
   },
 
+  '/login': function (req, res) {
+    console.log(req.body.id)
+    Vehiculo.find({ id: req.body.id }, function (error, vehiculo) {
+      
+    });
+    
+    Vehiculo.find().populate('clientes', {where: {id: req.body.id}}, function(error, vehiculo){
+      if (!vehiculo) {
+        return res.notFound('Vehículo no encontrado');
+      }
+      
+      res.ok(vehiculo)
+    })
+
+
+  },
+
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

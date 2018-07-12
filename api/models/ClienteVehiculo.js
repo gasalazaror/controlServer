@@ -6,7 +6,7 @@ module.exports = {
     cliente: { model: 'cliente' },
     vehiculo: { model: 'vehiculo' },
     esActual: { type: 'boolean' },
-    ordenes: {collection: 'orden' , via: 'clienteVehiculo'}
+   // ordenes: {collection: 'orden' , via: 'clienteVehiculo'}
   },
   primarykey: 'id'
 

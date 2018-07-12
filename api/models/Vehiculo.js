@@ -10,8 +10,10 @@ module.exports = {
     numeroMotor: { type: 'string' },
     placa: { type: 'string' },
     color: { type: 'string' },
+    ordenes: {collection: 'orden', via: 'vehiculo'},
     empresa: { model: 'empresa' },
     clientes: { collection: 'cliente', via: 'vehiculos' },
+    dueno: {model: 'cliente'},
   },
 
   primaryKey: 'id',

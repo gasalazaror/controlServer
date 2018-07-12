@@ -3,7 +3,8 @@ module.exports = {
 
   attributes: {
     id: { type: 'number', autoIncrement: true },
-    clienteVehiculo:{ model: 'clienteVehiculo' },
+    cliente:{ model: 'cliente' },
+    vehiculo:{ model: 'vehiculo' },
     ordenServicio: {collection: 'ordenServicio',via: 'orden'},
     empresa: {model: 'empresa'}
   },
