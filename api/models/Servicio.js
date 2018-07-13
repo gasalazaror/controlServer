@@ -4,6 +4,7 @@ module.exports = {
     id: { type: 'number', autoIncrement: true },
     descripcion: { type: 'string' },
     tiempoEstandar: { type: 'string' },
+    categoria:{model: 'categoria'},
   //  ordenServicio: {collection: 'ordenServicio',via: 'servicio'},
    // servicioRepuesto: {collection: 'servicioRepuesto',via: 'servicio'},
     empresa: {model: 'empresa'}
