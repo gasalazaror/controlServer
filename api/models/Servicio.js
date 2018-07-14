@@ -5,7 +5,7 @@ module.exports = {
     descripcion: { type: 'string' },
     tiempoEstandar: { type: 'string' },
     categoria:{model: 'categoria'},
-  //  ordenServicio: {collection: 'ordenServicio',via: 'servicio'},
+    ordenServicio: {collection: 'ordenServicio',via: 'servicio'},
    // servicioRepuesto: {collection: 'servicioRepuesto',via: 'servicio'},
     empresa: {model: 'empresa'}
   },
