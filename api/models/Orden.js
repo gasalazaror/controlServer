@@ -5,7 +5,11 @@ module.exports = {
     id: { type: 'number', autoIncrement: true },
     cliente:{ model: 'cliente' },
     vehiculo:{ model: 'vehiculo' },
-    ordenServicio: {collection: 'ordenServicio',via: 'orden'},
+    servicios:{
+      collection: 'servicio',
+      via: 'orden',
+      through: 'ordenServicio'
+    },
     empresa: {model: 'empresa'}
   },
   primaryKey:'id'

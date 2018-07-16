@@ -1,7 +1,7 @@
 module.exports = {
 
   attributes: {
-    id: { type: 'number', autoIncrement: true },
+    
     orden: { model: 'orden' },
     servicio: { model: 'servicio' },
     horaInicio: { type: 'string' },
@@ -11,7 +11,6 @@ module.exports = {
      grupo: {model: 'grupo'},
     // pausas : {collection: 'pausa', via: 'ordenServicio'},
     pausaActual: { type: 'string' }
-  },
-  primaryKey: 'id'
+  }
 };
 
