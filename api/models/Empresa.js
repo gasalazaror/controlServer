@@ -11,10 +11,15 @@ module.exports = {
     ordenes: {collection:'orden', via: 'empresa'},
     //grupos: {collection:'grupo', via: 'empresa'},
     vehiculos: {collection:'vehiculo', via: 'empresa'},
+
+    
     
   },
 
-  primaryKey: 'id'
+
+  primaryKey: 'id',
+
+  
 
 };
 

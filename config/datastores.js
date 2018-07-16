@@ -52,7 +52,7 @@ module.exports.datastores = {
     //url: 'postgresql://postgres@localhost:5432/bd_controltiempos'
 
     adapter: require('sails-mysql'),
-    url: 'mysql://root:12345@localhost:3306/control',
+    url: 'mysql://root:kai2018zen@localhost:3306/control',
   //  url: 'mysql://b64bcc6d17d409:a75bd34f@us-cdbr-iron-east-04.cleardb.net/heroku_6429bdc4706e438?reconnect=true'
   },
 

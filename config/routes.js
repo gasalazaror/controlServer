@@ -28,6 +28,8 @@ module.exports.routes = {
     view: 'pages/homepage'
   },
 
+  'POST /ordenes': 'orden/ordenes',
+
   '/login': function (req, res) {
     console.log(req.body.id)
     Vehiculo.find({ id: req.body.id }, function (error, vehiculo) {

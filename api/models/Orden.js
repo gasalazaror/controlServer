@@ -12,6 +12,18 @@ module.exports = {
     },
     empresa: {model: 'empresa'}
   },
-  primaryKey:'id'
+
+  // customToJSON: function() {
+  //   var orden = this
+   
+  //   Persona.findOne({id: orden.cliente.persona}, function(error, persona) {
+  //     orden.cliente.persona = persona
+  //   return _.omit(this, ['razonSocial'])
+  //   })
+   
+  // },
+  primaryKey:'id',
+
+ 
 
 };
