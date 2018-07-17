@@ -9,7 +9,7 @@ module.exports = {
     estado: { type: 'string', defaultsTo: 'CITA/RECEPCIÓN' },
     // asignaciones: {collection: 'asignacion',via: 'ordenServicio'},
      grupo: {model: 'grupo'},
-    // pausas : {collection: 'pausa', via: 'ordenServicio'},
+     pausas : {collection: 'pausa', via: 'ordenServicio'},
     pausaActual: { type: 'string' }
   }
 };
