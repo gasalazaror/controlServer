@@ -2,12 +2,12 @@ module.exports = {
   attributes: {
     
     id: { type: 'number', autoIncrement: true },
-    cedula: { type: 'string', required: true },
+    cedula: { type: 'string' },
     nombre: { type: 'string', required: true },
     estado: { type: 'string', required: true },
-    telefono: { type: 'string', required: true },
-    direccion: { type: 'string', required: true },
-    correo: { type: 'string', required: true },
+    telefono: { type: 'string' },
+    direccion: { type: 'string' },
+    correo: { type: 'string', required: true, unique: true },
     empresa: { model: 'empresa' },
     cliente: {collection: 'cliente', via: 'persona'},
     usuario: {collection: 'usuario', via: 'persona'}
