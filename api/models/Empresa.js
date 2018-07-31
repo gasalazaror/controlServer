@@ -9,7 +9,7 @@ module.exports = {
     personas: {collection: 'persona', via: 'empresa'},
     servicios: {collection:'servicio', via: 'empresa'},
     ordenes: {collection:'orden', via: 'empresa'},
-    //grupos: {collection:'grupo', via: 'empresa'},
+    operadores: {collection:'operador', via: 'empresa'},
     vehiculos: {collection:'vehiculo', via: 'empresa'},
     marcas: {collection: 'marca', via: 'empresa'}
  

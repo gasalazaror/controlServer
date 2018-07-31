@@ -6,7 +6,7 @@ module.exports = {
     roles: { collection: 'rol', via: 'usuarios', dominant: true },
     persona: { model: 'persona' },
     // asignaciones: {collection: 'asignacion',via: 'usuario'},
-    grupo: { model: 'grupo' }
+    operadores: {collection: 'operador',via: 'usuarios'},
   },
   primaryKey: 'id',
 
