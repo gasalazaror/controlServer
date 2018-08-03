@@ -21,9 +21,25 @@ module.exports.routes = {
     if (req.session.usuario) {
       return res.json(req.session.usuario)
     } else {
-      return res.json({estado: false})
+      return res.json({ estado: false })
     }
-   
+
+
+  },
+
+  'POST /reporte': function (req, res) {
+    var sql = req.param('sql');
+    console.log(sql)
+    Orden.query(sql, function(error, resultado){
+      if(error){
+        console.log(error)
+        return res.badRequest(
+          'Error en la consulta'
+        );
+      }else{
+        return res.ok(resultado);
+      }
+    })
 
   }
 

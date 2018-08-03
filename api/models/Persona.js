@@ -5,6 +5,7 @@ module.exports = {
     cedula: { type: 'string' },
     nombre: { type: 'string', required: true },
     estado: { type: 'string', required: true },
+    tipo: { type: 'string' },
     telefono: { type: 'string' },
     direccion: { type: 'string' },
     correo: { type: 'string', required: true, unique: true },
