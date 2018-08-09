@@ -3,6 +3,7 @@ module.exports = {
   attributes: {
     id: { type: 'number', autoIncrement: true },
     descripcion: { type: 'string' },
+    codigo: { type: 'string' },
     tiempoEstandar: { type: 'string' },
     categoria:{model: 'categoria'},
     ordenes:{

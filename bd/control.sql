@@ -10,7 +10,7 @@ Target Server Type    : MariaDB
 Target Server Version : 100307
 File Encoding         : 65001
 
-Date: 2018-08-04 12:31:08
+Date: 2018-08-09 16:55:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -46,12 +46,13 @@ CREATE TABLE `categoria` (
   `padre` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of categoria
 -- ----------------------------
-INSERT INTO `categoria` VALUES ('1533231173863', '1533231173863', '1', 'CAMBIOS', '1', null);
+INSERT INTO `categoria` VALUES ('1533654397879', '1533654397879', '1', 'SERVICIOS', '1', null);
+INSERT INTO `categoria` VALUES ('1533657176655', '1533657176655', '2', 'SERVICIOS 23', '1', '1');
 
 -- ----------------------------
 -- Table structure for cliente
@@ -64,14 +65,12 @@ CREATE TABLE `cliente` (
   `persona` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of cliente
 -- ----------------------------
-INSERT INTO `cliente` VALUES ('1533230648353', '1533230648353', '1', '3');
-INSERT INTO `cliente` VALUES ('1533230777166', '1533230777166', '2', '4');
-INSERT INTO `cliente` VALUES ('1533231115824', '1533231115824', '3', '5');
+INSERT INTO `cliente` VALUES ('1533663509285', '1533663509285', '1', '2');
 
 -- ----------------------------
 -- Table structure for clientevehiculo
@@ -128,7 +127,7 @@ CREATE TABLE `empresa` (
 -- ----------------------------
 -- Records of empresa
 -- ----------------------------
-INSERT INTO `empresa` VALUES ('1533230528736', '1533230528736', '1', '', 'ABC', '', '');
+INSERT INTO `empresa` VALUES ('1533654363891', '1533654363891', '1', '', 'ABC', '', '');
 
 -- ----------------------------
 -- Table structure for grupo
@@ -201,14 +200,12 @@ CREATE TABLE `operador` (
   `empresa` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of operador
 -- ----------------------------
-INSERT INTO `operador` VALUES ('1533230669019', '1533230669019', '1', 'LOPEZ OBRADOR', '', '1', '1');
-INSERT INTO `operador` VALUES ('1533230669365', '1533230669365', '2', 'LOPEZ OBRADOR 2', '', '1', '1');
-INSERT INTO `operador` VALUES ('1533230793906', '1533230793906', '3', 'LOPEZ REINALDO', '', '1', '1');
+INSERT INTO `operador` VALUES ('1533758997765', '1533758997765', '1', 'GABRIEL SALAZAR', '', '1', '1');
 
 -- ----------------------------
 -- Table structure for operador_usuarios__usuario_operadores
@@ -220,13 +217,12 @@ CREATE TABLE `operador_usuarios__usuario_operadores` (
   `usuario_operadores` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of operador_usuarios__usuario_operadores
 -- ----------------------------
-INSERT INTO `operador_usuarios__usuario_operadores` VALUES ('2', '2', '2');
-INSERT INTO `operador_usuarios__usuario_operadores` VALUES ('3', '3', '3');
+INSERT INTO `operador_usuarios__usuario_operadores` VALUES ('1', '1', '1');
 
 -- ----------------------------
 -- Table structure for orden
@@ -241,23 +237,22 @@ CREATE TABLE `orden` (
   `empresa` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of orden
 -- ----------------------------
-INSERT INTO `orden` VALUES ('1533231191490', '1533231191563', '1', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533245032988', '1533245033097', '2', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533247893033', '1533247893200', '3', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533248953186', '1533248953265', '4', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533250378496', '1533250378552', '5', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533314896397', '1533314896581', '6', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533319265203', '1533319265296', '7', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533319557343', '1533319557452', '8', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533327294207', '1533327294269', '9', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533399502416', '1533399502500', '10', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533401605689', '1533401605853', '11', '3', '1', '1');
-INSERT INTO `orden` VALUES ('1533402181526', '1533402181597', '12', '3', '1', '1');
+INSERT INTO `orden` VALUES ('1533760271279', '1533760271463', '1', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533763442742', '1533763442839', '2', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533764317262', '1533764317543', '3', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533764629980', '1533764630147', '4', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533824353653', '1533824353896', '5', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533834414010', '1533834414092', '6', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533835734123', '1533835734201', '7', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533837751845', '1533837751914', '8', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533843160141', '1533843160205', '9', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533845433676', '1533845433764', '10', '1', '1', '1');
+INSERT INTO `orden` VALUES ('1533848799500', '1533848799617', '11', '1', '1', '1');
 
 -- ----------------------------
 -- Table structure for ordenservicio
@@ -276,24 +271,26 @@ CREATE TABLE `ordenservicio` (
   `operador` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ordenservicio
 -- ----------------------------
-INSERT INTO `ordenservicio` VALUES ('1533231191599', '1533242613549', '1', '2018-08-02T20:43:30.657Z', '2018-08-02T20:43:33.529Z', 'POR FACTURAR', '', '1', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533245033160', '1533245150777', '2', '2018-08-02T21:24:12.057Z', '2018-08-02T21:25:50.752Z', 'POR FACTURAR', '', '2', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533247893250', '1533247946771', '3', '2018-08-02T22:11:49.262Z', '2018-08-02T22:12:26.750Z', 'POR FACTURAR', '', '3', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533248953302', '1533249170224', '4', '2018-08-02T22:29:29.744Z', '2018-08-02T22:32:50.206Z', 'POR FACTURAR', '', '4', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533250378590', '1533250549902', '5', '2018-08-02T22:53:10.542Z', '2018-08-02T22:55:49.877Z', 'POR FACTURAR', '', '5', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533314896631', '1533315192767', '6', '2018-08-03T16:48:30.331Z', '2018-08-03T16:53:12.746Z', 'POR FACTURAR', '', '6', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533319265359', '1533319495165', '7', '2018-08-03T18:01:25.615Z', '2018-08-03T18:04:55.142Z', 'POR FACTURAR', '', '7', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533319557484', '1533323684049', '8', '2018-08-03T18:06:10.693Z', '2018-08-03T19:14:43.973Z', 'POR FACTURAR', '', '8', '2', '3');
-INSERT INTO `ordenservicio` VALUES ('1533327294307', '1533333690976', '9', '2018-08-03T20:17:46.548Z', '2018-08-03T22:01:30.954Z', 'POR FACTURAR', '', '9', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533327294307', '1533399522791', '10', '2018-08-03T22:01:27.682Z', '2018-08-04T16:18:42.771Z', 'POR FACTURAR', '', '9', '2', '3');
-INSERT INTO `ordenservicio` VALUES ('1533399502555', '1533399627035', '11', '2018-08-04T16:19:34.203Z', '2018-08-04T16:20:27.011Z', 'POR FACTURAR', '', '10', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533401605945', '1533401664225', '12', '1533401618494', '1533401664197', 'POR FACTURAR', '', '11', '1', '3');
-INSERT INTO `ordenservicio` VALUES ('1533402181631', '1533402208749', '13', '2018-08-04T17:03:28.730Z', '', 'EN PRODUCCIÓN', '', '12', '1', '3');
+INSERT INTO `ordenservicio` VALUES ('1533760271613', '1533823650907', '1', '2018-08-08T21:04:09.615Z', '2018-08-09T14:07:30.879Z', 'POR FACTURAR', '', '1', '3', '1');
+INSERT INTO `ordenservicio` VALUES ('1533763442952', '1533823752769', '2', '2018-08-08T21:24:28.292Z', '2018-08-09T14:09:12.752Z', 'POR FACTURAR', '', '2', '1', '1');
+INSERT INTO `ordenservicio` VALUES ('1533764317579', '1533822500364', '3', '2018-08-08T21:42:21.716Z', '2018-08-09T13:48:20.349Z', 'POR FACTURAR', '', '3', '3', '1');
+INSERT INTO `ordenservicio` VALUES ('1533764630198', '1533822486970', '4', '2018-08-09T13:26:29.250Z', '2018-08-09T13:48:06.885Z', 'POR FACTURAR', '', '4', '2', '1');
+INSERT INTO `ordenservicio` VALUES ('1533824354000', '1533846317330', '5', '2018-08-09T14:22:30.369Z', '2018-08-09T20:25:17.311Z', 'POR FACTURAR', '', '5', '1', '1');
+INSERT INTO `ordenservicio` VALUES ('1533824354000', '1533837107700', '6', '2018-08-09T16:52:17.170Z', '2018-08-09T17:51:47.683Z', 'POR FACTURAR', '', '5', '2', '1');
+INSERT INTO `ordenservicio` VALUES ('1533824354000', '1533837724592', '7', '2018-08-09T16:53:37.754Z', '2018-08-09T18:02:04.573Z', 'POR FACTURAR', '', '5', '3', '1');
+INSERT INTO `ordenservicio` VALUES ('1533834414310', '1533834692867', '8', '2018-08-09T17:07:40.849Z', '2018-08-09T17:11:32.848Z', 'POR FACTURAR', '', '6', '1', '1');
+INSERT INTO `ordenservicio` VALUES ('1533835734348', '1533846318302', '9', '2018-08-09T17:29:24.688Z', '2018-08-09T20:25:18.287Z', 'POR FACTURAR', '', '7', '1', '1');
+INSERT INTO `ordenservicio` VALUES ('1533835734348', '1533844435605', '10', '2018-08-09T17:29:26.640Z', '2018-08-09T19:53:55.076Z', 'POR FACTURAR', '', '7', '2', '1');
+INSERT INTO `ordenservicio` VALUES ('1533835734348', '1533845240498', '11', '2018-08-09T17:29:28.575Z', '2018-08-09T20:07:19.821Z', 'POR FACTURAR', '', '7', '3', '1');
+INSERT INTO `ordenservicio` VALUES ('1533837751955', '1533846321057', '12', '2018-08-09T18:02:50.901Z', '2018-08-09T20:25:21.039Z', 'POR FACTURAR', '', '8', '12', '1');
+INSERT INTO `ordenservicio` VALUES ('1533843160288', '1533848762040', '13', '2018-08-09T19:49:01.989Z', '', 'EN PRODUCCIÓN - PAUSADO', '23', '9', '5', '1');
+INSERT INTO `ordenservicio` VALUES ('1533845433796', '1533848827072', '14', '2018-08-09T20:10:47.285Z', '', 'EN PRODUCCIÓN - PAUSADO', '24', '10', '1', '1');
+INSERT INTO `ordenservicio` VALUES ('1533848799697', '1533848837383', '15', '2018-08-09T21:06:55.060Z', '2018-08-09T21:07:17.363Z', 'POR FACTURAR', '', '11', '1', '1');
 
 -- ----------------------------
 -- Table structure for pausa
@@ -304,23 +301,41 @@ CREATE TABLE `pausa` (
   `updatedAt` bigint(20) DEFAULT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `horaInicio` varchar(255) DEFAULT NULL,
+  `motivo` varchar(255) DEFAULT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
   `horaFin` varchar(255) DEFAULT NULL,
   `ordenServicio` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of pausa
 -- ----------------------------
-INSERT INTO `pausa` VALUES ('1533245071505', '1533245088834', '1', '2018-08-02T21:24:31.496Z', '2018-08-02T21:24:48.816Z', '2');
-INSERT INTO `pausa` VALUES ('1533245116113', '1533245128883', '2', '2018-08-02T21:25:16.104Z', '2018-08-02T21:25:28.864Z', '2');
-INSERT INTO `pausa` VALUES ('1533245137578', '1533245144653', '3', '2018-08-02T21:25:37.568Z', '2018-08-02T21:25:44.632Z', '2');
-INSERT INTO `pausa` VALUES ('1533249160265', '1533249165853', '4', '2018-08-02T22:32:40.254Z', '2018-08-02T22:32:45.838Z', '4');
-INSERT INTO `pausa` VALUES ('1533250445758', '1533250518985', '5', '2018-08-02T22:54:05.749Z', '2018-08-02T22:55:18.965Z', '5');
-INSERT INTO `pausa` VALUES ('1533315046911', '1533315079102', '6', '2018-08-03T16:50:46.899Z', '2018-08-03T16:51:19.082Z', '6');
-INSERT INTO `pausa` VALUES ('1533315137959', '1533315143812', '7', '2018-08-03T16:52:17.946Z', '2018-08-03T16:52:23.793Z', '6');
-INSERT INTO `pausa` VALUES ('1533327726861', '1533333679936', '8', '2018-08-03T20:22:06.849Z', '2018-08-03T22:01:19.906Z', '9');
+INSERT INTO `pausa` VALUES ('1533831672054', '1533831672054', '1', '2018-08-09T16:21:11.955Z', 'FALTA DE AUTORIZACIÓN', '', '', '5');
+INSERT INTO `pausa` VALUES ('1533831751469', '1533831751469', '2', '2018-08-09T16:22:31.460Z', 'FALTA DE AUTORIZACIÓN', '', '', '5');
+INSERT INTO `pausa` VALUES ('1533831821989', '1533831821989', '3', '2018-08-09T16:23:41.980Z', 'FALTA DE REPUESTOS', '23', '', '5');
+INSERT INTO `pausa` VALUES ('1533833154555', '1533833154555', '4', '2018-08-09T16:45:54.522Z', 'FALTA DE AUTORIZACIÓN', '02', '', '5');
+INSERT INTO `pausa` VALUES ('1533833222990', '1533833222990', '5', '2018-08-09T16:47:02.978Z', 'FALTA DE AUTORIZACIÓN', '', '', '5');
+INSERT INTO `pausa` VALUES ('1533833282797', '1533833282797', '6', '2018-08-09T16:48:02.789Z', 'FALTA DE AUTORIZACIÓN', '', '', '5');
+INSERT INTO `pausa` VALUES ('1533833502981', '1533837610326', '7', '2018-08-09T16:51:42.972Z', 'FALTA DE AUTORIZACIÓN', 'sd', '2018-08-09T18:00:10.303Z', '5');
+INSERT INTO `pausa` VALUES ('1533833545436', '1533837091236', '8', '2018-08-09T16:52:25.428Z', 'FALTA DE AUTORIZACIÓN', '', '2018-08-09T17:51:31.204Z', '6');
+INSERT INTO `pausa` VALUES ('1533833628699', '1533837139571', '9', '2018-08-09T16:53:48.691Z', 'FALTA DE AUTORIZACIÓN', 'sdsd', '2018-08-09T17:52:19.555Z', '7');
+INSERT INTO `pausa` VALUES ('1533835856721', '1533835856721', '10', '2018-08-09T17:30:56.713Z', 'BREAK', '56', '', '9');
+INSERT INTO `pausa` VALUES ('1533835870041', '1533835870041', '11', '2018-08-09T17:31:10.031Z', 'FALTA DE REPUESTOS', '26', '', '9');
+INSERT INTO `pausa` VALUES ('1533836029933', '1533846217684', '12', '2018-08-09T17:33:49.917Z', 'FALTA DE AUTORIZACIÓN', '25', '2018-08-09T20:23:37.669Z', '9');
+INSERT INTO `pausa` VALUES ('1533836043885', '1533844094264', '13', '2018-08-09T17:34:03.878Z', 'BREAK', '', '2018-08-09T19:48:13.400Z', '10');
+INSERT INTO `pausa` VALUES ('1533836096464', '1533843031382', '14', '2018-08-09T17:34:56.453Z', 'FALTA DE REPUESTOS', '', '2018-08-09T19:30:31.367Z', '11');
+INSERT INTO `pausa` VALUES ('1533837155439', '1533837614164', '15', '2018-08-09T17:52:35.428Z', 'ALMUERZO', '', '2018-08-09T18:00:14.143Z', '7');
+INSERT INTO `pausa` VALUES ('1533837660301', '1533837673989', '16', '2018-08-09T18:01:00.289Z', 'FINALIZACIÓN DE JORNADA LABORAL', '', '2018-08-09T18:01:13.975Z', '5');
+INSERT INTO `pausa` VALUES ('1533837693848', '1533846215371', '17', '2018-08-09T18:01:33.839Z', 'OTRO TRABAJO', '', '2018-08-09T20:23:35.351Z', '5');
+INSERT INTO `pausa` VALUES ('1533837873073', '1533837898413', '18', '2018-08-09T18:04:33.063Z', 'BREAK', '', '2018-08-09T18:04:58.396Z', '12');
+INSERT INTO `pausa` VALUES ('1533844180870', '1533848706868', '19', '2018-08-09T19:49:40.143Z', 'FALTA DE REPUESTOS', 'No hay llantas ', '2018-08-09T21:05:06.852Z', '13');
+INSERT INTO `pausa` VALUES ('1533845272028', '1533846220182', '20', '2018-08-09T20:07:51.397Z', 'BREAK', '', '2018-08-09T20:23:40.165Z', '12');
+INSERT INTO `pausa` VALUES ('1533845472325', '1533845481488', '21', '2018-08-09T20:11:11.190Z', 'FALTA DE REPUESTOS', '', '2018-08-09T20:11:20.391Z', '14');
+INSERT INTO `pausa` VALUES ('1533845494869', '1533848708912', '22', '2018-08-09T20:11:33.745Z', 'FINALIZACIÓN DE JORNADA LABORAL', '', '2018-08-09T21:05:08.900Z', '14');
+INSERT INTO `pausa` VALUES ('1533848760861', '1533848760861', '23', '2018-08-09T21:06:00.854Z', 'FALTA DE REPUESTOS', '', '', '13');
+INSERT INTO `pausa` VALUES ('1533848827012', '1533848827012', '24', '2018-08-09T21:07:07.004Z', 'OTRO TRABAJO', '', '', '14');
 
 -- ----------------------------
 -- Table structure for persona
@@ -341,16 +356,13 @@ CREATE TABLE `persona` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `correo` (`correo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of persona
 -- ----------------------------
-INSERT INTO `persona` VALUES ('1533230528849', '1533230528849', '1', '', 'GABRIEL SALAZAR', 'ACTIVO', '', '', '', 'gaso@gmail.com', '1');
-INSERT INTO `persona` VALUES ('1533230570431', '1533230570431', '2', '1723713556', 'GABRIEL SALAZAR', 'ACTIVO', 'NATURAL', '2621561', 'quito sur', 'gabrielsalazar@outlook.com', '1');
-INSERT INTO `persona` VALUES ('1533230631701', '1533230631701', '3', '1234567890', 'LOPEZ OBRADOR', 'ACTIVO', 'NATURAL', '2456123', 'mexico', 'mexico@gmail.com', '1');
-INSERT INTO `persona` VALUES ('1533230776412', '1533230776412', '4', '1478523690', 'LOPEZ REINALDO', 'ACTIVO', 'NATURAL', '2621561', 'QUITO NORTE', 'reinaldo@gmail.com', '1');
-INSERT INTO `persona` VALUES ('1533231114180', '1533231114180', '5', '1234569874001', 'CLIENTE 1', 'ACTIVO', 'NATURAL', 'CLIENTE', 'CLIENTE', 'cliente@gmail.com', '1');
+INSERT INTO `persona` VALUES ('1533654363990', '1533654363990', '1', '', 'GABRIEL SALAZAR', 'ACTIVO', '', '', '', 'gabo@gmail.com', '1');
+INSERT INTO `persona` VALUES ('1533663508652', '1533663508652', '2', '1723456321001', 'PAOLA ESTEFANIA', 'ACTIVO', 'NATURAL', '2456123', 'QUITO NORTE', 'gaso@gmail.com', '1');
 
 -- ----------------------------
 -- Table structure for repuesto
@@ -382,14 +394,11 @@ CREATE TABLE `rol` (
   `descripcion` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of rol
 -- ----------------------------
-INSERT INTO `rol` VALUES (null, null, '1', '1');
-INSERT INTO `rol` VALUES (null, null, '2', '2');
-INSERT INTO `rol` VALUES (null, null, '3', '3');
 
 -- ----------------------------
 -- Table structure for rol_usuarios__usuario_roles
@@ -401,15 +410,12 @@ CREATE TABLE `rol_usuarios__usuario_roles` (
   `usuario_roles` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of rol_usuarios__usuario_roles
 -- ----------------------------
-INSERT INTO `rol_usuarios__usuario_roles` VALUES ('4', '1', '2');
-INSERT INTO `rol_usuarios__usuario_roles` VALUES ('5', '2', '2');
-INSERT INTO `rol_usuarios__usuario_roles` VALUES ('6', '3', '2');
-INSERT INTO `rol_usuarios__usuario_roles` VALUES ('7', '2', '3');
+INSERT INTO `rol_usuarios__usuario_roles` VALUES ('1', '2', '1');
 
 -- ----------------------------
 -- Table structure for servicio
@@ -420,18 +426,29 @@ CREATE TABLE `servicio` (
   `updatedAt` bigint(20) DEFAULT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(255) DEFAULT NULL,
+  `codigo` varchar(255) DEFAULT NULL,
   `tiempoEstandar` varchar(255) DEFAULT NULL,
   `categoria` int(11) DEFAULT NULL,
   `empresa` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of servicio
 -- ----------------------------
-INSERT INTO `servicio` VALUES ('1533231180123', '1533315565372', '1', 'CAMBIO DE ACEITE', '2', '1', '1');
-INSERT INTO `servicio` VALUES ('1533319536880', '1533319536880', '2', 'PRUEBA', '45', '1', '1');
+INSERT INTO `servicio` VALUES ('1533654593182', '1533654593182', '1', 'CAMBIO DE ACEITE', '123521', '25', '1', '1');
+INSERT INTO `servicio` VALUES ('1533655069268', '1533655069268', '2', 'SERVICIO', '1234554', '15', '1', '1');
+INSERT INTO `servicio` VALUES ('1533658145478', '1533658145478', '3', 'SERVICIO 215', '2550', '25', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661777830', '1533661777830', '4', 'SERVICIO 5', '123', '25', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661786220', '1533661786220', '5', 'SERVICIO 25', '123', '25', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661795936', '1533661795936', '6', 'SERVICIO 26', '456', '25', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661811349', '1533661811349', '7', 'SERVICIO 27', '123456', '25', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661820413', '1533661820413', '8', 'SERVICIO 28', '123456789', '22112', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661828108', '1533661828108', '9', 'SERVICIO 29', '5686451', '123', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661840414', '1533661840414', '10', 'SERVICIO 30', '789456', '2', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661856535', '1533661856535', '11', 'SERVICIO 31', '2132132', '2', '2', '1');
+INSERT INTO `servicio` VALUES ('1533661868757', '1533661868757', '12', 'SERVICIO 32', '123324', '12', '2', '1');
 
 -- ----------------------------
 -- Table structure for serviciorepuesto
@@ -464,14 +481,12 @@ CREATE TABLE `usuario` (
   `persona` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of usuario
 -- ----------------------------
-INSERT INTO `usuario` VALUES ('1533230528899', '1533230528899', '1', '123', '1');
-INSERT INTO `usuario` VALUES ('1533230651738', '1533230669437', '2', '', '3');
-INSERT INTO `usuario` VALUES ('1533230777163', '1533230793960', '3', '1478523690', '4');
+INSERT INTO `usuario` VALUES ('1533654364049', '1533758998410', '1', '123', '1');
 
 -- ----------------------------
 -- Table structure for usuariorol
@@ -524,7 +539,7 @@ CREATE TABLE `vehiculo` (
 -- ----------------------------
 -- Records of vehiculo
 -- ----------------------------
-INSERT INTO `vehiculo` VALUES ('1533231160883', '1533231160883', '1', 'MARCA1', 'MODELO1', '132SD23', '132SD21', 'ABC123', 'AZUL', '', '', '', '', '1990', '', '', '', '0', '1', '3');
+INSERT INTO `vehiculo` VALUES ('1533663557225', '1533663557225', '1', 'MARCA', 'MODELO', '156', '123', 'ABC123', 'AZUL', '', '', '', '', '1990', '', '', '', '0', '1', '1');
 
 -- ----------------------------
 -- View structure for vista_pausas
@@ -576,7 +591,7 @@ TIME_FORMAT(SEC_TO_TIME(servicio.tiempoEstandar*60),'%H:%i:%s') as tiempoEstanda
 servicio.tiempoEstandar*60 as tiempoEstandarSec, 
 
 (
-FORMAT((
+ROUND((
 (servicio.tiempoEstandar*60)/ 
 (TIMESTAMPDIFF(SECOND,ordenservicio.horaInicio,ordenservicio.horaFin)-
 (
